@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
   if (req.url === '/favicon.ico') return
 
   res.setHeader('Access-Control-Allow-Origin', '*')
-  res.setHeader('Cache-Control', 'no-store')
+  res.setHeader('Cache-Control', 'no-store, max-age=0, must-revalidate')
   res.setHeader('Content-Type', 'image/svg+xml;charset=utf-8')
 
   const data = await bodyData(req)
