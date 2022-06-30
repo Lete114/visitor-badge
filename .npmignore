@@ -1,0 +1,6 @@
+node_modules
+.env
+.env.example
+.eslintrc.yml
+.prettierrc.yml
+package-lock.json

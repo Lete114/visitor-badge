@@ -1,0 +1,40 @@
+{
+  "name": "visitor-badge",
+  "version": "1.0.0-beta.0",
+  "description": "A badge generator service to count visitors of your markdown file.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:hot": "nodemon src/server.js",
+    "lint": "npx eslint src && npx prettier --check src",
+    "lint:fix": "npx eslint --fix src && npx prettier --check --write src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lete114/visitor-badge.git"
+  },
+  "keywords": [
+    "visitor",
+    "badge",
+    "visitor-badge"
+  ],
+  "author": "Lete乐特",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lete114/visitor-badge/issues"
+  },
+  "homepage": "https://github.com/Lete114/visitor-badge#readme",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "nodemon": "^2.0.18",
+    "prettier": "^2.6.2"
+  },
+  "dependencies": {
+    "badge-maker": "^3.3.1",
+    "body-data": "^1.0.5",
+    "dotenv": "^16.0.1",
+    "ioredis": "^5.1.0",
+    "mongodb": "^4.7.0",
+    "output-line": "^1.0.1"
+  }
+}
