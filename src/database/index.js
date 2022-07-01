@@ -2,7 +2,6 @@ const { VB_DB_TYPE, VB_DB_URL } = process.env
 
 module.exports = async function () {
   try {
-    if (!VB_DB_URL) throw new Error('No environment variables set "VB_DB_URL"')
     const db = (VB_DB_TYPE || '').toUpperCase()
 
     switch (db) {
