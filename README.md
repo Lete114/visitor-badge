@@ -1,7 +1,7 @@
 # visitor-badge
 
-<!-- ![visitor badge](https://visitor_badge.deta.dev/?pageID=Lete114.visitor-badge&type=uv&label=UV)
-![visitor badge](https://visitor_badge.deta.dev/?pageID=Lete114.visitor-badge&label=PV) -->
+![visitor badge](https://visitor_badge.deta.dev/?pageID=github.Lete114.visitor-badge&type=uv&label=UV)
+![visitor badge](https://visitor_badge.deta.dev/?pageID=github.Lete114.visitor-badge&label=PV)
 
 简体中文 | [English](README_EN.md)
 
@@ -38,7 +38,7 @@ npm run start
 ### 使用
 
 ```markdown
-![visitor badge](https://visitor_badge.deta.dev/?pageID=Lete114.visitor-badge)
+![visitor badge](https://visitor_badge.deta.dev/?pageID=github.Lete114.visitor-badge)
 ```
 
 > 其中 `pageID` 是自定义的，它不受任何约束。
