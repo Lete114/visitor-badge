@@ -8,10 +8,16 @@ async function connectDatabase() {
   db = new Redis(VB_DB_URL)
 }
 
-module.exports = async (pageID) => {
+module.exports = async (ip, pageID, type) => {
   try {
     await connectDatabase()
-    return await db.incr(pageID)
+    if (type === 'uv') {
+      const uv = pageID + '_uv'
+      await db.sadd(uv, ip)
+      return await db.scard(uv)
+    } else {
+      return await db.incr(pageID)
+    }
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error(error)
