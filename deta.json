@@ -1,0 +1,17 @@
+{
+  "name": "visitor-badge",
+  "description": "A badge generator service to count visitors of your markdown file.",
+  "env": [
+    {
+      "key": "VB_DB_TYPE",
+      "description": "Your database type.",
+      "value": "deta",
+      "required": true
+    },
+    {
+      "key": "VB_DB_URL",
+      "description": "Your database URL.",
+      "required": false
+    }
+  ]
+}
