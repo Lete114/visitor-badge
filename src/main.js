@@ -18,13 +18,14 @@ module.exports = async (req, res) => {
   const ip = GetUserIP(req, (process.env.VB_HEADERS || '').split(','))
 
   const data = await bodyData(req)
-  data.type = (data.type || '').toLowerCase() === 'uv' ? 'uv' : 'pv'
 
   if (!Object.keys(data).length) {
     res.setHeader('Content-Type', 'text/html;charset=utf-8')
     res.end(`<meta http-equiv="refresh" content="0;url=${homepage}">`)
     return
   }
+
+  data.type = (data.type || '').toLowerCase() === 'uv' ? 'uv' : 'pv'
 
   const options = {
     style: 'flat',
