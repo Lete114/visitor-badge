@@ -24,7 +24,7 @@ module.exports = async (ip, pageID, type) => {
     if (type === 'uv') {
       options.$addToSet = { uv: ip }
     } else {
-      options.$inc = { pv: 1 }
+      options.$inc = { pv: 0 }
     }
     await db.collection(VB).findOneAndUpdate(query, options, { upsert: true })
     const result = await db.collection(VB).findOne(query)
