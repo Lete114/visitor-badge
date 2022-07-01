@@ -1,4 +1,4 @@
-const { VB_DB_TYPE, VB_DB_URL } = process.env
+const { VB_DB_TYPE } = process.env
 
 module.exports = async function () {
   try {
