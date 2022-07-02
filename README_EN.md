@@ -5,7 +5,7 @@
 
 [简体中文](README.md) | English
 
-> **warning: The example service is currently deployed on the free version of [Deta](https://deta.sh), so if there are too many simultaneous requests, I will shut it down and I suggest you deploy one yourself for your own use**
+> **The example service is currently deployed on the free version of [Deta](https://deta.sh)**
 
 Inspired by [jwenjian/visitor-badge](https://github.com/jwenjian/visitor-badge) written in `Python` (PV stats only)
 
