@@ -5,7 +5,7 @@
 
 简体中文 | [English](README_EN.md)
 
-> **警告: 该示例服务目前部署在免费版本的 [Deta](https://deta.sh) 上，因此如果同时有请求太多，我将关闭它，并建议您自己部署一个供自己使用**
+> **警告: 该示例服务目前部署在免费版本的 [Deta](https://deta.sh) 上，因此如果同时有太多请求，我将关闭它，并建议您自己部署一个供自己使用**
 
 灵感来源于 [jwenjian/visitor-badge](https://github.com/jwenjian/visitor-badge) 使用 `Python` 编写 (仅有 PV 统计)
 
