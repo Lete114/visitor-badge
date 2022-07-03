@@ -12,7 +12,7 @@ module.exports = async (ip, pageID, type) => {
   try {
     await connectDatabase()
     if (type === 'uv') {
-      const uv = pageID + '_uv'
+      const uv = 'uv_' + pageID
       await db.sadd(uv, ip)
       return await db.scard(uv)
     } else {
