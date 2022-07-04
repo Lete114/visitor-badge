@@ -12,7 +12,7 @@ async function connectDatabase() {
 module.exports = async (ip, pageID, type) => {
   try {
     await connectDatabase()
-    const get = (await db.get(pageID)) || { pv: 0, uv: ['0.0.0.0'] }
+    const get = (await db.get(pageID)) || { pv: 0, uv: [] }
     const result = await db.put(get, pageID)
     const update = {}
 
