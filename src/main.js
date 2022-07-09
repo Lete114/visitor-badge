@@ -39,7 +39,7 @@ module.exports = async (req, res) => {
 
   if (data.style && styles.includes(data.style)) options.style = data.style
 
-  const counter = await counterHandler(ip, data.pageID, data.type)
+  const counter = await counterHandler(ip, data.pageID.toLowerCase(), data.type)
 
   options.message = counter.toString()
 
