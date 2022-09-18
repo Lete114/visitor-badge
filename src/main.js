@@ -40,24 +40,26 @@ module.exports = async (req, res) => {
 
     const options = {
       style: 'flat',
-      message: 'Missing param: pageID',
+      message: 'Missing param: id',
       color: data.color || '#4c1',
       label: data.label || 'visitors',
       labelColor: data.labelColor || '#555'
     }
 
-    if (!data.pageID) return res.end(makeBadge(options))
+    if (data.pageID) data.id = data.pageID
+
+    if (!data.id) return res.end(makeBadge(options))
 
     // 获取用户 IP
     const ip = GetUserIP(req, (VB_HEADERS || '').split(','))
 
     let counter = 0
 
-    data.pageID = data.pageID.toLowerCase()
+    data.id = data.id.toLowerCase()
     if ((data.type || '').toLowerCase() === 'uv') {
-      counter = await uv(data.pageID, ip)
+      counter = await uv(data.id, ip)
     } else {
-      counter = await pv(data.pageID)
+      counter = await pv(data.id)
     }
 
     if (data.style && styles.includes(data.style)) options.style = data.style

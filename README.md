@@ -1,11 +1,11 @@
 # visitor-badge
 
-![visitor badge](https://visitor_badge.deta.dev/?pageID=github.Lete114.visitor-badge&type=uv&label=UV)
-![visitor badge](https://visitor_badge.deta.dev/?pageID=github.Lete114.visitor-badge&label=PV)
+![visitor badge](https://visitor_badge.deta.dev/?id=github.Lete114.visitor-badge&type=uv&label=UV)
+![visitor badge](https://visitor_badge.deta.dev/?id=github.Lete114.visitor-badge&label=PV)
 
 简体中文 | [English](README_EN.md)
 
-> **该示例服务目前部署在免费版本的 [Deta](https://deta.sh) 上**
+> **该示例服务目前部署在免费版本的 [Deta](https://deta.sh) 上，你可以分 [/list](https://visitor_badge.deta.dev/list) 路径来查看所有的统计**
 
 灵感来源于 [jwenjian/visitor-badge](https://github.com/jwenjian/visitor-badge) 使用 `Python` 编写 (仅有 PV 统计)
 
@@ -38,22 +38,22 @@ npm run start
 ### 使用
 
 ```markdown
-![visitor badge](https://visitor_badge.deta.dev/?pageID=github.Lete114.visitor-badge)
+![visitor badge](https://visitor_badge.deta.dev/?id=github.Lete114.visitor-badge)
 ```
 
-> 其中 `pageID` 是自定义的，它不受任何约束。
+> 其中 `id` 是自定义的，它不受任何约束。
 >
 > 这里有一些建议
 >
-> 1.  指定某个用户主页，如: https://github.com/Lete114 使用 `pageID=github.Lete114`
-> 2.  指定某个用户的仓库，如: https://github.com/Lete114/visitor-badge 使用 `pageID=github.Lete114.visitor-badge`
-> 3.  指定某个用户仓库中的 issues，如: https://github.com/Lete114/visitor-badge/issues/1 使用 `pageID=github.Lete114.visitor-badge.issues.1`
-> 4.  指定某个网站，如: https://blog.imlete.cn 使用 `pageID=blog.imlete.cn`
-> 5.  指定某个网站的某个页面，如: https://blog.imlete.cn/404.html 使用 `pageID=blog.imlete.cn.404`
+> 1.  指定某个用户主页，如: https://github.com/Lete114 使用 `id=github.Lete114`
+> 2.  指定某个用户的仓库，如: https://github.com/Lete114/visitor-badge 使用 `id=github.Lete114.visitor-badge`
+> 3.  指定某个用户仓库中的 issues，如: https://github.com/Lete114/visitor-badge/issues/1 使用 `id=github.Lete114.visitor-badge.issues.1`
+> 4.  指定某个网站，如: https://blog.imlete.cn 使用 `id=blog.imlete.cn`
+> 5.  指定某个网站的某个页面，如: https://blog.imlete.cn/404.html 使用 `id=blog.imlete.cn.404`
 
 | Key        | Default    | Required | Options                                                       |
 | ---------- | ---------- | -------- | ------------------------------------------------------------- |
-| pageID     |            | ✅       |                                                               |
+| id         |            | ✅       |                                                               |
 | type       | 'pv'       |          | ['pv', 'uv']                                                  |
 | label      | 'visitors' |          |                                                               |
 | labelColor | '#555'     |          |                                                               |

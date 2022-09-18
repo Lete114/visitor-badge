@@ -14,18 +14,18 @@ async function connectDatabase() {
 }
 
 module.exports = {
-  async pv(pageID) {
+  async pv(id) {
     await connectDatabase()
     const options = { $inc: { pv: 1 } }
-    await db.collection(VB).findOneAndUpdate({ pageID }, options, { upsert: true })
-    const result = await db.collection(VB).findOne({ pageID })
+    await db.collection(VB).findOneAndUpdate({ id }, options, { upsert: true })
+    const result = await db.collection(VB).findOne({ id })
     return result.pv
   },
-  async uv(pageID, ip) {
+  async uv(id, ip) {
     await connectDatabase()
     const options = { $addToSet: { uv: ip } }
-    await db.collection(VB).findOneAndUpdate({ pageID }, options, { upsert: true })
-    const result = await db.collection(VB).findOne({ pageID })
+    await db.collection(VB).findOneAndUpdate({ id }, options, { upsert: true })
+    const result = await db.collection(VB).findOne({ id })
     return result.uv.length
   },
   async list() {
@@ -33,9 +33,10 @@ module.exports = {
     const result = await db.collection(VB).find().toArray()
     const datas = {}
     for (const item of result) {
-      datas[item.pageID] = {}
-      datas[item.pageID].pv = item.pv
-      datas[item.pageID].uv = item.uv.length
+      const id = item.id
+      datas[id] = {}
+      datas[id].pv = item.pv
+      datas[id].uv = item.uv.length
     }
     return datas
   }

@@ -4,11 +4,11 @@ const Redis = require('ioredis')
 const db = new Redis(VB_DB_URL)
 
 module.exports = {
-  async pv(pageID) {
-    return await db.incr(pageID)
+  async pv(id) {
+    return await db.incr(id)
   },
-  async uv(pageID, ip) {
-    const uv = 'uv_' + pageID
+  async uv(id, ip) {
+    const uv = 'uv_' + id
     await db.sadd(uv, ip)
     return await db.scard(uv)
   },

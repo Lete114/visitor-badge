@@ -5,8 +5,8 @@ const deta = Deta(DETA_PROJECT_KEY || VB_DB_URL)
 const db = deta.Base('visitor_badge')
 
 module.exports = {
-  async pv(pageID) {
-    let get = await db.get(pageID)
+  async pv(id) {
+    let get = await db.get(id)
 
     if (!get) {
       get = { pv: 1, uv: [] }
@@ -14,16 +14,16 @@ module.exports = {
       get.pv++
     }
 
-    const result = await db.put(get, pageID)
+    const result = await db.put(get, id)
 
     return result.pv
   },
-  async uv(pageID, ip) {
-    const get = (await db.get(pageID)) || { pv: 1, uv: [] }
+  async uv(id, ip) {
+    const get = (await db.get(id)) || { pv: 1, uv: [] }
 
     if (!get.uv.includes(ip)) {
       get.uv.push(ip)
-      await db.put(get, pageID)
+      await db.put(get, id)
     }
 
     return get.uv.length
