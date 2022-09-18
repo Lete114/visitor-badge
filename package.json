@@ -1,9 +1,10 @@
 {
   "name": "visitor-badge",
-  "version": "1.0.0-beta.9",
+  "version": "1.0.0-beta.10",
   "description": "A badge generator service to count visitors of your markdown file.",
   "main": "src/main.js",
   "scripts": {
+    "pnpm": "pnpm i",
     "start": "node src/server.js",
     "start:hot": "nodemon src/server.js",
     "lint": "npx eslint src && npx prettier --check src",
@@ -13,6 +14,9 @@
     "type": "git",
     "url": "git+https://github.com/Lete114/visitor-badge.git"
   },
+  "files": [
+    "src","README.md","README_EN.md","LICENSE"
+  ],
   "keywords": [
     "visitor",
     "badge",
@@ -27,6 +31,7 @@
   "devDependencies": {
     "eslint": "^8.16.0",
     "nodemon": "^2.0.18",
+    "pnpm": "^7.11.0",
     "prettier": "^2.6.2"
   },
   "dependencies": {
