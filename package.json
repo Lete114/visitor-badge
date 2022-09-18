@@ -1,6 +1,6 @@
 {
   "name": "visitor-badge",
-  "version": "1.0.0-beta.7",
+  "version": "1.0.0-beta.10",
   "description": "A badge generator service to count visitors of your markdown file.",
   "main": "src/main.js",
   "scripts": {
