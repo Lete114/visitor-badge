@@ -1,3 +1,4 @@
+require('dotenv').config()
 require('output-line')()
 const bodyData = require('body-data')
 const GetUserIP = require('get-user-ip')
