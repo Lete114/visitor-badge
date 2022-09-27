@@ -39,7 +39,7 @@ Rename the `.env.example` file to `.env` and edit it (just fill in the comments 
 
 ```markdown
 ![visitor badge](https://visitor_badge.deta.dev/?id=github.lete114.visitor-badge)
-![visitor badge](https://visitor_badge.deta.dev/?id=github.lete114.visitor-badge&labelColor=%23f00)
+![visitor badge](https://visitor_badge.deta.dev/?id=github.lete114.visitor-badge&labelColor=f00)
 ```
 
 > where `id` is custom and it is not constrained in any way.
@@ -52,13 +52,11 @@ Rename the `.env.example` file to `.env` and edit it (just fill in the comments 
 > 4.  Specify a website, e.g.: https://blog.imlete.cn using `id=blog.imlete.cn`
 > 5.  Specify a page of a website, e.g.: https://blog.imlete.cn/404.html using `id=blog.imlete.cn.404`
 
-> **Note:** Since the url will treat the HEX (hexadecimal) color code as the hash of the url, the browser will be truncated after **#** when sending the request, so you need to change **#** to **%23**, for example, the custom color is red `labelColor=#f00` to ` labelColor=%23f00`
-
-| Key        | Default  | Required | Options                                                       | Description                     |
-| ---------- | -------- | -------- | ------------------------------------------------------------- | ------------------------------- |
-| id         |          | ✅       |                                                               | Page unique ID                  |
-| type       | pv       |          | ['pv', 'uv']                                                  | Statistics type                 |
-| label      | visitors |          |                                                               | Custom label (left) name        |
-| labelColor | #555     |          |                                                               | Custom label (left) color       |
-| color      | #4c1     |          |                                                               | Custom stats (right side) color |
-| style      | flat     |          | ['plastic', 'flat', 'flat-square', 'for-the-badge', 'social'] | Custom badge style              |
+| Key        | Default  | Required | Options                                                       | Description                                                                   |
+| ---------- | -------- | -------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| id         |          | ✅       |                                                               | Page unique ID                                                                |
+| type       | pv       |          | ['pv', 'uv']                                                  | Statistics type                                                               |
+| label      | visitors |          |                                                               | Custom label (left) name                                                      |
+| labelColor | 555      |          |                                                               | Custom label (left) color (Note: You can leave out the well number `#`)       |
+| color      | 4c1      |          |                                                               | Custom stats (right side) color (Note: You can leave out the well number `#`) |
+| style      | flat     |          | ['plastic', 'flat', 'flat-square', 'for-the-badge', 'social'] | Custom badge style                                                            |

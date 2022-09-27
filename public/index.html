@@ -1,0 +1,168 @@
+<!-- Original: https://github.com/Lete114/visitor-badge -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visitor Badge</title>
+  <script>
+    /**
+     * Original: https://github.com/Lete114/msg-alert
+     */
+    var message=function(){"use strict";function t(t){return t instanceof Element}function e(t){return"string"==typeof t}function n(t,e){var n=document.createElement(t);return e&&(n.className=e),n}function o(t,e){var n=document.createElementNS("http://www.w3.org/2000/svg",t);for(var o in e)n.setAttribute(o,e[o]);return n}function r(t,e){var n=e.previousElementSibling;n.classList.contains("_msg")&&(t=parseInt(n.style.top)+parseInt(n.offsetHeight)),e.style.top=t+16+"px"}var i="_msg-opacity",s=[],a=["info","success","warn","error"],c=n("style");c.textContent="._msg{left:50%;color:#909399;font-size:14px;width:300px;padding:16px 17px;position:fixed;line-height:1;letter-spacing:1px;word-wrap:break-word;word-break:break-all;z-index:9999999999;border-radius:6px;border:1px solid #edf2fc;background-color:#edf2fc;transform:translateX(-50%);transition:opacity 0.3s,transform 0.5s,top 0.5s;}._msg p{margin:0;font-size:14px;padding-right:16px;}._msg svg{top:50%;right:15px;cursor:pointer;position:absolute;transform:translateY(-50%);}._msg-opacity{opacity:0;transform:translate(-50%,-100%);}._msg-success{background-color:#e1f3d8;border-color:#e1f3d8;color:#67c23a;}._msg-warn{background-color:#fdfce6;border-color:#fdfce6;color:#e6a23c;}._msg-error{background-color:#fef0f0;border-color:#fef0f0;color:#f56c6c;}",document.head.appendChild(c);var f=function(t){u[a[t]]=function(n){e(n)?n={text:n,type:a[t]}:n.type=a[t],u(n)}};for(var l in a)f(l);function d(t,e,n,o){return setTimeout((function(){t.style.top=0,t.classList.add(i),"function"==typeof o&&o(),setTimeout((function(){t.parentElement.removeChild(t)}),500);var e=s.findIndex((function(e){return e.id===t.id}));for(var a in s.splice(e,1),s)r(n,s[a])}),e)}function u(c){var f;e(c)&&(c={text:c});var l=Object.assign({type:a[0],text:"",offset:20,duration:3e3},c),u=l.text,p=l.type,m=l.zIndex,g=l.offset,x=l.duration,v=l.customClass,h=l.html,y=l.showClose,b=l.onClose,w=l.appendTo,C=n("div","_msg _msg-".concat(p," ").concat(i," ").concat(v||""));C.style.zIndex=m||1,C.id=function(t){t=t||10;for(var e=function(){return Math.random().toString(36).slice(2)},n=e();n.length<t;)n+=e();return n.slice(0,t)}(),s.push(C),setTimeout((function(){C.classList.remove(i)}),100),x&&(C.t=d(C,x,g,b),C.onmouseenter=function(){f||clearTimeout(C.t)},C.onmouseleave=function(){f||(C.t=d(C,x,g,b))});var _,k=n("p");if(C.appendChild(k),h?k.innerHTML=u:k.innerText=u,y||!x){var T=function(){var t=o("svg",{width:"16px",height:"16px",stroke:"currentColor",viewBox:"0 0 16 16","stroke-linecap":"round"}),e=o("line",{x1:-7,y1:-7,x2:6,y2:6,transform:"translate(8.5 8.5)"}),n=o("line",{x1:6,y1:-7,x2:-7,y2:6,transform:"translate(8.5 8.5)"});return t.appendChild(e),t.appendChild(n),t}();T.onclick=function(){clearTimeout(C.t),f=!0,d(C,0,g,b)},C.appendChild(T)}t(w)?_=w:e(w)&&(_=document.querySelector(w)),t(_)||(_=document.body),_.appendChild(C),r(g,s[s.length-1])}return u.destroyAll=function(){for(var t in s)clearTimeout(s[t].t),d(s[t])},u}();
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-width: 400px;
+    }
+
+    .container {
+      margin: 0 auto;
+      width: 800px;
+      height: 100%;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title {
+      margin: 50px 0;
+      text-align: center;
+    }
+
+    .title svg {
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 0.2em;
+      vertical-align: bottom;
+    }
+
+    .param {
+      width: 100%;
+      outline: none;
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      position: relative;
+      border: none;
+      border-bottom: 2px solid #bfbfbf;
+      transition: 0.2s ease transform;
+    }
+
+    .param:focus {
+      border-bottom: 2px solid #00bfb3;
+      transition: 0.2s ease transform;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .row :first-child {
+      margin-right: 10px;
+    }
+
+    select {
+      width: 100%;
+    }
+
+    .btn {
+      line-height: 38px;
+      background-color: #00bfb3;
+      color: #fff;
+      white-space: nowrap;
+      text-align: center;
+      font-size: 14px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 5px;
+      width: 160px;
+      margin: 30px 0;
+    }
+
+    .preview {
+      margin: 20px auto;
+    }
+
+    .url {
+      line-height: 1.2em;
+      padding: 8px 10px;
+      border-radius: 4px;
+      background: #eeeeff;
+    }
+
+    @media (max-width: 820px) {
+      .container {
+        width: 100%;
+      }
+    }
+  </style>
+  <script>
+    addEventListener('DOMContentLoaded', function () {
+      const url = document.querySelector('.url')
+      const preview = document.querySelector('.preview')
+      const imgUrl = new URL(preview.src)
+
+      url.textContent = location.href
+
+      const param = document.querySelectorAll('.param')
+      const id = document.getElementById('id')
+      document.querySelector('.btn').onclick = function () {
+        if (!id.value) return message.error('Must specify id')
+        param.forEach((el) => {
+            if (el.value)
+                imgUrl.searchParams.set(el.id, el.value)
+        })
+        preview.src = imgUrl.href
+        url.textContent = location.href + imgUrl.search
+        
+      }
+    })
+  </script>
+  
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Visitor Badge</h1>
+    <div class="input-wrap">
+      <div class="row">
+        <input class="param" id="id" type="text" required="required" placeholder="id" />
+        <input class="param" id="label" type="text" placeholder="label" />
+      </div>
+      <div class="row">
+        <input class="param" id="labelColor" type="text" placeholder="labelColor" />
+        <input class="param" id="color" type="text" placeholder="color" />
+      </div>
+      <div class="row">
+        <select class="param" id="type">
+          <option value="pv" selected>pv</option>
+          <option value="uv">uv</option>
+        </select>
+        <select class="param" id="style">
+          <option value="plastic">plastic</option>
+          <option value="flat" selected>flat</option>
+          <option value="flat-square">flat-square</option>
+          <option value="for-the-badge">for-the-badge</option>
+          <option value="social">social</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn">Make Badge</button>
+    <img src="/preview" alt="badge" class="preview">
+    <code class="url"></code>
+  </div>
+</body>
+
+</html>
