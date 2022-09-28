@@ -15,7 +15,11 @@
     "url": "git+https://github.com/Lete114/visitor-badge.git"
   },
   "files": [
-    "src","README.md","README_EN.md","LICENSE"
+    "public",
+    "src",
+    "README.md",
+    "README_EN.md",
+    "LICENSE"
   ],
   "keywords": [
     "visitor",
