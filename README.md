@@ -17,6 +17,10 @@ Inspired by [jwenjian/visitor-badge](https://github.com/jwenjian/visitor-badge) 
 
 ## Deployment
 
+### Deta Free
+
+[![Deploy with Deta](https://deta.space/buttons/dark.svg)](https://deta.space/discovery/@leter/visitorbadge)
+
 ### Server
 
 ```bash
