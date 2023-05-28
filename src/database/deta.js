@@ -1,7 +1,7 @@
-const { VB_DB_URL, DETA_PROJECT_KEY } = process.env
+const { VB_DB_URL } = process.env
 
 const { Deta } = require('deta')
-const deta = Deta(DETA_PROJECT_KEY || VB_DB_URL)
+const deta = Deta(VB_DB_URL)
 const db = deta.Base('visitor_badge')
 
 module.exports = {
