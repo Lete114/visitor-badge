@@ -1,9 +1,11 @@
 # visitor-badge
 
-![visitor badge](https://visitor_badge.deta.dev/?id=github.lete114.visitor-badge&type=uv&label=UV)
-![visitor badge](https://visitor_badge.deta.dev/?id=github.lete114.visitor-badge&label=PV)
+![visitor badge](https://visitor-badge.imlete.cn/?id=github.lete114.visitor-badge&type=uv&label=UV)
+![visitor badge](https://visitor-badge.imlete.cn/?id=github.lete114.visitor-badge&label=PV)
 
-> **The example service is currently deployed on the free version of [Deta](https://deta.sh), You can visit the [/list](https://visitor_badge.deta.dev/list) path to see all the statistics**
+> **Warning** Since `Deta` will abandon Deta Cloud and move to Deta Space, the deta.dev domain is temporarily closed to users, please change `visitor_badge.deta.dev` to `visitor-badge.imlete.cn`
+
+> **The example service is currently deployed on the free version of [Deta](https://deta.space), You can visit the [/list](https://visitor-badge.imlete.cn/list) path to see all the statistics**
 
 Inspired by [jwenjian/visitor-badge](https://github.com/jwenjian/visitor-badge) written in `Python` (PV stats only)
 
@@ -36,8 +38,8 @@ Rename the `.env.example` file to `.env` and edit it (just fill in the comments 
 ### Use
 
 ```markdown
-![visitor badge](https://visitor_badge.deta.dev/?id=github.lete114.visitor-badge)
-![visitor badge](https://visitor_badge.deta.dev/?id=github.lete114.visitor-badge&labelColor=f00)
+![visitor badge](https://visitor-badge.imlete.cn/?id=github.lete114.visitor-badge)
+![visitor badge](https://visitor-badge.imlete.cn/?id=github.lete114.visitor-badge&labelColor=f00)
 ```
 
 > where `id` is custom and it is not constrained in any way.
