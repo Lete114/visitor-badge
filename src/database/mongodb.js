@@ -36,7 +36,7 @@ module.exports = {
       const id = item.id
       datas[id] = {}
       datas[id].pv = item.pv
-      datas[id].uv = item.uv.length
+      datas[id].uv = item.uv?.length || 0
     }
     return datas
   }
