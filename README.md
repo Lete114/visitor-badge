@@ -3,10 +3,6 @@
 ![visitor badge](https://visitor-badge.imlete.cn/?id=github.lete114.visitor-badge&type=uv&label=UV)
 ![visitor badge](https://visitor-badge.imlete.cn/?id=github.lete114.visitor-badge&label=PV)
 
-> **Warning** Since `Deta` will abandon Deta Cloud and move to Deta Space, the deta.dev domain is temporarily closed to users, please change `visitor_badge.deta.dev` to `visitor-badge.imlete.cn`
-
-> **The example service is currently deployed on the free version of [Deta](https://deta.space), You can visit the [/list](https://visitor-badge.imlete.cn/list) path to see all the statistics**
-
 Inspired by [jwenjian/visitor-badge](https://github.com/jwenjian/visitor-badge) written in `Python` (PV stats only)
 
 ## Function
@@ -16,10 +12,6 @@ Inspired by [jwenjian/visitor-badge](https://github.com/jwenjian/visitor-badge) 
 - Multi-database selection (mongodb, redis, deta)
 
 ## Deployment
-
-### Deta Free
-
-[![Deploy with Deta](https://deta.space/buttons/dark.svg)](https://deta.space/discovery/@leter/visitorbadge)
 
 ### Server
 
